@@ -1,11 +1,7 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import url, include
 from django.contrib import admin
-import blog.views as bv
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'myblog.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include('blog.urls')),
-)
+
+urlpatterns = [
+    url(r'^index/',include('blog.urls')),
+]
