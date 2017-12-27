@@ -58,6 +58,22 @@ MIDDLEWARE_CLASSES = (
 )
 # url的根文件
 ROOT_URLCONF = 'myblog.urls'
+#模板引擎
+TEMPLATE = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIR': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 WSGI_APPLICATION = 'myblog.wsgi.application'
 
